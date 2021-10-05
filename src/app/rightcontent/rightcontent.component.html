@@ -1,0 +1,14 @@
+
+    <div *ngFor="let news of newsdata;let i=index">
+        <div class="trand-right-single d-flex" *ngIf="i>3">
+                <div class="trand-right-img">
+                    <img src={{news.img}} alt="">
+                </div>
+                <div class="trand-right-cap">
+                    <span class="color1">{{news.genre}}</span>
+                    <h4><a [routerLink]="['/newsdetail',news.id]">{{news.title}}</a></h4>
+                </div>
+        </div>
+    </div>
+    
+    

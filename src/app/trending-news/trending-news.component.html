@@ -1,0 +1,27 @@
+
+    <!-- Trending Top -->
+    <div class="trending-top mb-30">
+        <div class="trend-top-img">
+            <img src="assets/img/trending/trending_top.jpg" alt="">
+            <div class="trend-top-cap">
+                <span>Appetizers</span>
+                <h2><a [routerLink]="['/newsdetail',1]">Welcome To The Best Model Winner<br> Contest At Look of the year</a></h2>
+            </div>
+        </div>
+    </div>
+    <!-- Trending Bottom -->
+    <div class="trending-bottom">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let news of newsdata;let i=index">
+                <div class="single-bottom mb-35" *ngIf="i<=3">
+                    <div class="trend-bottom-img mb-30">
+                        <img src={{news.img}} alt="">
+                    </div>
+                    <div class="trend-bottom-cap">
+                        <span class="color1">{{news.genre}}</span>
+                        <h4><a [routerLink]="['/newsdetail',news.id]">{{news.title}}</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
